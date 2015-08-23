@@ -34,7 +34,7 @@
   <hgroup class="auto-fadein">
     <h1>Coursera Developing Data Products</h1>
     <h2>Course Project</h2>
-    <p>Atlanta Sam<br/>Dog Walker, Jedi Knight</p>
+    <p>Atlanta Sam<br/>Dog Walker, Data Miner, Jedi Knight</p>
   </hgroup>
   <article></article>  
 </slide>
@@ -43,36 +43,81 @@
     <!-- SLIDES -->
     <slide class="" id="slide-1" style="background:;">
   <hgroup>
-    <h2>Read-And-Delete</h2>
+    <h2>People Will Come, Ray.</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>People will come and play with my App!</p>
+
+<p>For the first part of the project, I developed my first Shiny App using some baseball data.</p>
+
+<p>The App investigates the offensive production (Runs, Hits and Home Runs) of Major League Baseball teams from 1950 to 2014.</p>
+
+<p>Here&#39;s a link to that app ---&gt; <a href="https://atlantasam.shinyapps.io/baseball">https://atlantasam.shinyapps.io/baseball</a></p>
+
+<p>Here&#39;s a link to the github repo ---&gt; <a href="https://github.com/AtlantaSam/baseball.git">https://github.com/AtlantaSam/baseball.git</a> </p>
+
+<p>And, a clip from &quot;Field of Dreams&quot; ... 
+<a href="https://www.youtube.com/watch?v=QOOLX9R8Ncc">https://www.youtube.com/watch?v=QOOLX9R8Ncc</a></p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Lahman</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>I&#39;m a certified Sabermetrician - that&#39;s a funny way of saying I&#39;m a Data Scientist that works with baseball data.</p>
+
+<p>If you haven&#39;t seen &quot;Moneyball&quot; you might check it out - it&#39;s a movie about Sabermetrics.
+Here are some scenes: <a href="https://www.youtube.com/watch?v=Bj20TKaRgN8">https://www.youtube.com/watch?v=Bj20TKaRgN8</a></p>
+
+<p>By the way, I got my baseball data by installing the &quot;Lahman&quot; package ... it&#39;s basically got all Major League Baseball Data through last season.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Using the Lahman Package</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The All-Time Top 10 Teams regarding Runs Per Game (RPG)</p>
+
+<pre><code class="r">library(&quot;Lahman&quot;); data(Teams); Teams_sub$RPG &lt;- Teams_sub$R/Teams_sub$G
+top10_RPG &lt;- Teams_sub[c(&quot;name&quot;, &quot;yearID&quot;, &quot;RPG&quot;)]
+top10_RPG &lt;- top10_RPG[order(-top10_RPG$RPG),]; head(top10_RPG, n=10)
+</code></pre>
+
+<pre><code>##                        name yearID      RPG
+## 866        New York Yankees   1930 6.896104
+## 881        New York Yankees   1931 6.883871
+## 960        New York Yankees   1936 6.870968
+## 1186         Boston Red Sox   1950 6.668831
+## 872     St. Louis Cardinals   1930 6.519481
+## 896        New York Yankees   1932 6.423077
+## 873            Chicago Cubs   1930 6.397436
+## 897  Philadelphia Athletics   1932 6.370130
+## 1008       New York Yankees   1939 6.361842
+## 856            Chicago Cubs   1929 6.294872
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Summary</h2>
   </hgroup>
   <article data-timings="">
     <ol>
-<li>Edit YAML front matter</li>
-<li>Write using R Markdown</li>
-<li>Use an empty line followed by three dashes to separate slides!</li>
+<li>An App has been presented that investigates the Offensive Production of Baseball Teams since 1950 to 2014.</li>
+<li>An example has been given concerning the package that I used</li>
+<li>I hope you found it interesting and (in some regard) useful</li>
 </ol>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="class" id="id" style="background:;">
-  <hgroup>
-    <h2>Slide 2</h2>
-  </hgroup>
-  <article data-timings="">
-    <p>Test Slide 2</p>
-
-  </article>
-  <!-- Presenter Notes -->
-</slide>
-
-<slide class="class" id="id" style="background:;">
-  <hgroup>
-    <h2>Slide 3</h2>
-  </hgroup>
-  <article data-timings="">
-    <p>Test Slide 3</p>
 
   </article>
   <!-- Presenter Notes -->
@@ -84,20 +129,26 @@
     <ul>
       <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=1 title='Read-And-Delete'>
+        data-slide=1 title='People Will Come, Ray.'>
          1
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=2 title='Slide 2'>
+        data-slide=2 title='Lahman'>
          2
       </a>
     </li>
     <li>
       <a href="#" target="_self" rel='tooltip' 
-        data-slide=3 title='Slide 3'>
+        data-slide=3 title='Using the Lahman Package'>
          3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Summary'>
+         4
       </a>
     </li>
   </ul>

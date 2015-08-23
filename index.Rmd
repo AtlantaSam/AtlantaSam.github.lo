@@ -2,7 +2,7 @@
 title       : Coursera Developing Data Products
 subtitle    : Course Project
 author      : Atlanta Sam
-job         : Dog Walker, Jedi Knight
+job         : Dog Walker, Data Miner, Jedi Knight
 framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
 highlighter : highlight.js  # {highlight.js, prettify, highlight}
 hitheme     : tomorrow      # 
@@ -11,21 +11,50 @@ mode        : selfcontained # {standalone, draft}
 knit        : slidify::knit2slides
 ---
 
-## Read-And-Delete
+## People Will Come, Ray.
 
-1. Edit YAML front matter
-2. Write using R Markdown
-3. Use an empty line followed by three dashes to separate slides!
+People will come and play with my App!
+
+
+For the first part of the project, I developed my first Shiny App using some baseball data.
+
+The App investigates the offensive production (Runs, Hits and Home Runs) of Major League Baseball teams from 1950 to 2014.
+
+Here's a link to that app ---> https://atlantasam.shinyapps.io/baseball
+
+Here's a link to the github repo ---> https://github.com/AtlantaSam/baseball.git 
+
+And, a clip from "Field of Dreams" ... 
+https://www.youtube.com/watch?v=QOOLX9R8Ncc
+
 
 --- .class #id 
 
-## Slide 2
 
-Test Slide 2
+## Lahman
+
+I'm a certified Sabermetrician - that's a funny way of saying I'm a Data Scientist that works with baseball data.
+
+If you haven't seen "Moneyball" you might check it out - it's a movie about Sabermetrics.
+Here are some scenes: https://www.youtube.com/watch?v=Bj20TKaRgN8
+
+By the way, I got my baseball data by installing the "Lahman" package ... it's basically got all Major League Baseball Data through last season.
 
 --- .class #id 
 
+## Using the Lahman Package
 
-## Slide 3
+The All-Time Top 10 Teams regarding Runs Per Game (RPG)
+```{r}
+library("Lahman"); data(Teams); Teams_sub$RPG <- Teams_sub$R/Teams_sub$G
+top10_RPG <- Teams_sub[c("name", "yearID", "RPG")]
+top10_RPG <- top10_RPG[order(-top10_RPG$RPG),]; head(top10_RPG, n=10)
+```
 
-Test Slide 3
+--- .class #id 
+
+## Summary
+
+1. An App has been presented that investigates the Offensive Production of Baseball Teams since 1950 to 2014.
+2. An example has been given concerning the package that I used
+3. I hope you found it interesting and (in some regard) useful

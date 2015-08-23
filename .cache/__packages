@@ -1,0 +1,16 @@
+base
+shiny
+rJava
+xlsxjars
+xlsx
+ggplot2
+plyr
+dplyr
+markdown
+Lahman
+shinydashboard
+lattice
+shinyapps
+devtools
+slidify
+knitr
